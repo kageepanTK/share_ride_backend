@@ -33,7 +33,10 @@ async function startServer() {
     await configureRedisAdapter(io);
 
     // Start the HTTP and Socket.IO server
-    server.listen(PORT, () => {
+    // server.listen(PORT, () => {
+    //     console.log(`Backend running at http://localhost:${PORT}`);
+    // });
+    server.listen(PORT, "0.0.0.0", () => {
         console.log(`Backend running at http://localhost:${PORT}`);
     });
 }
